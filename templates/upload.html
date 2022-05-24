@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Page</title>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+  <script defer src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</head>
+
+<body>
+  {% if badImage %}
+    <script>alert("You have uploaded a bad image")</script>
+  {% endif %}
+  
+  <div>
+    <h1 class="headline">Enter the student details</h1>
+
+    <form enctype="multipart/form-data" action="/upload" method="POST">
+      <!-- <label for="Name">Name:</label><br>
+      <input type="text" id="Name" name="Name"><br>
+      <label for="Roll">Roll No:</label><br>
+      <input type="text" id="Roll" name="Roll"><br> -->
+      <div class="form-group">
+        <span>Name</span>
+        <input required class="form-field" id="name" name="name" type="text" placeholder="eg: Suman Kumar Mandal">
+      </div>
+
+      <div class="form-group">
+        <span>Roll Number</span>
+        <input required class="form-field" id="roll" name="roll" type="text" placeholder="eg: 20101106050">
+
+      </div>
+      <!-- <p>File: <input  type = "file" name = "filename" /></p> -->
+      <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <div class="file-upload">
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
+          Image</button>
+
+        <div class="image-upload-wrap">
+          <input required class="file-upload-input" type='file' id="image" name="image" onchange="readURL(this);" accept="image/*" />
+          <div class="drag-text">
+            <h3>Drag and drop a file or select add Image</h3>
+          </div>
+        </div>
+        <div class="file-upload-content">
+          <img class="file-upload-image" src="#" alt="your image" />
+          <div class="image-title-wrap">
+            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span
+                class="image-title">Uploaded Image</span></button>
+          </div>
+        </div>
+      </div>
+      <!-- <p><input type = "submit" value = "Upload" /></p> -->
+      <button class="button">
+        <span class="submit">Upload</span>
+        <span class="loading"><i class="fa fa-refresh"></i></span>
+        <span class="check"><i class="fa fa-check"></i></span>
+      </button>
+    </form>
+  </div>
+</body>
+
+</html>

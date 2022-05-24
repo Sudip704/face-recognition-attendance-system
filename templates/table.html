@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+  <title>Give Your Attendace</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="headline">Attendance Record </h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Name</div>
+        <div class="col col-2">Roll No.</div>
+        <div class="col col-3">Check in time</div>
+      </li>
+      <!-- <li class="table-row">
+        <div class="col col-1" data-label="Name">Piyasa</div>
+        <div class="col col-2" data-label="Roll No.">20101106052</div>
+        <div class="col col-3" data-label="Attendace status">Present</div>
+      </li> -->
+      {% for row in data %}
+      <li class="table-row">
+        <div class="col col-1" data-label="Name">{{row[0]}}</div>
+        <div class="col col-2" data-label="Roll No.">{{row[1]}}</div>
+        <div class="col col-3" data-label="Attendace status">{{row[2]}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+    background-image: url("../img/side-view-woman-face-scan.jpg");
+
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    
+   
+   
+   
+}
+.headline{
+    margin-bottom: 70px;
+    color: white;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+    /* color: brown; */
+    font-size: 50px;
+}
+.center{
+    text-align: center;
+}
+
+.videoFrame{
+    height: 100px;
+    width: 200px;
+}
+
+a{
+    text-decoration: none;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -65px;
+    margin-top: -20px;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+}
+.button {
+    outline: none;
+    height: 40px;
+    text-align: center;
+    width: 130px;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px solid black;
+    color: black;
+    letter-spacing: 1px;
+    text-shadow: 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding: 15px 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.button:hover {
+    color: white;
+    background: black;
+}
+.button:active {
+    letter-spacing: 2px;
+}
+/* button:after {
+    content: "SUBMIT";
+} */
+.onclic {
+    width: 40px;
+    border-color: #bbb;
+    border-width: 3px;
+    font-size: 0;
+    border-left-color: #1ecd97;
+    animation: rotating 2s 0.25s linear infinite;
+}
+.onclic:after {
+    content: "";
+}
+.onclic:hover {
+    color: black;
+    background: white;
+}
+.validate {
+    font-size: 13px;
+    color: white;
+    background: black;
+}
+.validate:after {
+    font-family: 'FontAwesome';
+    content: "\f00c";
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+   }
+    to {
+        transform: rotate(360deg);
+   }
+}
+
+.body {
+    
+    background-color: #cccccc;
+    height:0.1px;
+    width: 0.5px;
+   }

@@ -78,6 +78,7 @@ def generate_frames():
                 cv2.waitKey(1)
             except:
                 break;
+    cam.release()
 @app.route('/')
 def index():
     cam.release()

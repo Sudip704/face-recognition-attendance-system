@@ -30,7 +30,7 @@ def findEncodings(images):    # returns list of face encodings
         encode=face_recognition.face_encodings(img)[0]
         encodeList.append(encode)
     return encodeList
-def markAttendance(name,roll):
+def markAttendance(name,roll): # notes down the name, roll, and time in the table.html
     with open('Attendance.csv','r+') as f:
         myDataList=f.readlines()
         nameList=[]
@@ -46,7 +46,7 @@ def markAttendance(name,roll):
             dtString=now.strftime('%I:%M %p')
             f.writelines(f'{name},{roll},{dtString}\n')
 Known_Students_encodings=findEncodings(images)
-def generate_frames():
+def generate_frames(): # checks whether the face detected in webcam matches with any of the faces in the uploaded images
     cam.open(0)
     while True:
         success, img=cam.read()
@@ -56,7 +56,6 @@ def generate_frames():
             try:
                 imgS=cv2.resize(img,(0,0),None,0.25,0.25)
                 imgS = cv2.cvtColor(imgS, cv2.COLOR_BGR2RGB)
-                # encode = face_recognition.face_encodings(imgS)[0]
                 facesCurFrame = face_recognition.face_locations(imgS)
                 encodesCurFrame=face_recognition.face_encodings(imgS,facesCurFrame)
                 for encodeFace,faceLoc in zip(encodesCurFrame,facesCurFrame):
@@ -99,7 +98,7 @@ def table():
             csvRows.append(row)     
     return render_template('table.html',data=csvRows)
 @app.route('/upload',methods=['GET','POST'])
-def upload():
+def upload(): #uploads a new entry (name, email and roll)
     if request.method == 'POST':
         file = request.files['image']
         name=request.form['name']

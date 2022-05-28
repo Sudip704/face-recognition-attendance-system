@@ -4,7 +4,7 @@ To make a web app, which takes in details of students and then marks the attenda
 ### Tech Stack
 
 - HTML, CSS and Javascript
-- Python
+- Python, Flask and OpenCv
 
 ## Getting Started
 
@@ -65,22 +65,12 @@ Download <a href="https://git-scm.com/downloads">Git</a>
 
 <details>
 <summary>
-Step 4: Fork the Repository
-</summary>
-<br>
-Click on <a href="#" target="_self"><img src="https://user-images.githubusercontent.com/63921263/110382285-b07bba80-8080-11eb-8407-d354849c1753.png" width="16"></img></a> to fork <a href="https://github.com/Sudip704/face-recognition-attendance-system">this</a> repsository
-</details>
-
----
-
-<details>
-<summary>
-Step 5: Cloning Repository using Git
+Step 4: Cloning Repository using Git
 </summary>
 <br>
 
 ```bash
-git clone https://github.com/'<your-github-username>'/face-recognition-attendance-system.git
+git clone https://github.com/Sudip704/face-recognition-attendance-system.git
 ```
 </details>
 
@@ -88,7 +78,7 @@ git clone https://github.com/'<your-github-username>'/face-recognition-attendanc
 
 <details>
 <summary>
-Step 6: Installing Requirements
+Step 5: Installing Requirements
 </summary>
 <br>
 <li>Open the local copy of the folder 'face-recognition-attendance-system'  in your code editor (preferrably VS Code)</li>
@@ -105,7 +95,7 @@ pip install -r requirements.txt
 
 <details>
 <summary>
-Step 7: Running the Project in local server
+Step 6: Running the Project in local server
 </summary>
 <br>
 <li>Now simply paste this</li> 
@@ -118,6 +108,6 @@ python app.py
 <li> To stop press Ctrl+C</li>
 </details>
 
-## Congratulations on setting up the project locally.
 ---
 
+### Project overview video <a href="https://youtu.be/CyN72VazgN4">link</a> 
